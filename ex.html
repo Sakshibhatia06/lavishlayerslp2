@@ -3,102 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Cards with Animation</title>
+    <title>Thank You | lavishhlayers</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container1 {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
-            padding: 20px;
-        }
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #bf9437, #6d6b63);
+            color: #fff;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
         }
-        .card img {
-            width: 100%;
-            height: 200px;
-            border-radius: 10px 10px 0 0;
+
+        h1 {
+            font-size: 2.9rem;
+            margin-bottom: 10px;
+            animation: fadeIn 2s;
         }
-        .card h3 {
-            margin: 10px 0 0;
-            font-size: 1.5rem;
-            color: #333;
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            animation: fadeIn 2.5s;
         }
-        .card p {
-            font-size: 1rem;
-            color: #666;
-            margin: 10px 0 20px;
-        }
-        .card button {
-            background-color: #007BFF;
-            color: white;
+
+        .join-button {
+            display: inline-block;
+            padding: 15px 60px;
+            font-size: 1.2rem;
+            color: #fff;
+            background: #bf9437;;
             border: none;
             border-radius: 5px;
-            padding: 10px 15px;
+            text-decoration: none;
             cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
+            animation: pulse 2s infinite;
+            transition: background 0.3s;
         }
-        .card button:hover {
-            background-color: #0056b3;
+
+        .join-button:hover {
+            background: #e64a19;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .join-button span {
+            display: inline-block;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <img src="img/interior1.jpg" alt="Wall Panels">
-            <h3>Wall Panels</h3>
-            <p>₹50/sqft</p>
-            <button>Get a Free Quote Now!</button>
-        </div>
-        <div class="card">
-            <img src="img/interior2.jpg" alt="Ceilings">
-            <h3>Ceilings</h3>
-            <p>₹75/sqft</p>
-            <button>Get a Free Quote Now!</button>
-        </div>
-        <div class="card">
-            <img src="img/interior3.jpg" alt="Louvers">
-            <h3>Louvers</h3>
-            <p>₹100/sqft</p>
-            <button>Get a Free Quote Now!</button>
-        </div>
-        <div class="card">
-            <img src="img/interior4.jpg" alt="Marble Sheets">
-            <h3>Marble Sheets</h3>
-            <p>₹150/sqft</p>
-            <button>Get a Free Quote Now!</button>
-        </div>
-        <div class="card">
-            <img src="img/interior5.jpg" alt="Gypsum Board Ceilings">
-            <h3>Gypsum Board Ceilings</h3>
-            <p>₹90/sqft</p>
-            <button>Get a Free Quote Now!</button>
-        </div>
-        <div class="card">
-            <img src="img/interior6.jpg" alt="Wallpaper">
-            <h3>Wallpaper</h3>
-            <p>₹30/sqft</p>
-            <button>Get a Free Quote Now!</button>
-        </div>
+        <h1>Thank you for sharing your information 🎉</h1>
+        <p>Our team will contact you <strong style="color: #f0c843;">shortly!</strong></p>
+        <a class="join-button" href="index.html" target="_blank">
+         Go To Homepage  <span>➡️</span>
+        </a>
     </div>
 </body>
 </html>
