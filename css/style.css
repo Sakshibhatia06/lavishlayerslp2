@@ -805,3 +805,11 @@ h6 {
 .card button:hover {
     background-color: #bf9437;
 }
+.logon{
+    display: none;
+}
+@media (max-width: 767.98px) {
+    .logon{
+        display: block;
+    }
+}
