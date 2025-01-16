@@ -29,7 +29,10 @@ button:focus {
   outline: none; /* Prevent focus outline */
 }
 
-
+.highlight{
+    font-size: 22px;
+    font-weight: 700;
+}
 a {
     color: #bf9437;
     transition: 0.5s;
