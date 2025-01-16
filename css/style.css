@@ -10,12 +10,25 @@ body {
     font-weight: 300;
     background: #ffffff;
 }
-button{
-    background-color: transparent;
-    outline: none;
-    border: none;
-    color: #ffffff;
+button {
+  border: none; /* Remove the border */
+  outline: none; /* Remove the outline */
+    color:#ffffff;
+  background-color: transparent; /* Set background color to transparent */
+  box-shadow: none; /* Remove any box shadow */
 }
+
+button:active {
+  background-color: transparent; /* Prevent background color change on click */
+  border: none; /* Ensure no border on click */
+  outline: none; /* Prevent focus outline */
+  box-shadow: none; /* Prevent box shadow */
+}
+
+button:focus {
+  outline: none; /* Prevent focus outline */
+}
+
 
 a {
     color: #bf9437;
